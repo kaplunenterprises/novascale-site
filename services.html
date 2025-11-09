@@ -4,11 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Services — NovaScale</title>
-<link rel="icon" href="/logos/novascale_icon_n_gold.svg" type="image/svg+xml">
+  <meta name="description" content="Services offered by NovaScale">
+  <link rel="icon" href="/logos/novascale_icon_n_gold.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css">
+  <style>html{scroll-behavior:smooth}</style>
 </head>
 <body>
   <nav>
@@ -20,18 +22,54 @@
       <div class="links">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="#contact">Contact</a>
+        <!-- Contact from Services goes to the home page form -->
+        <a href="index.html#contact">Contact</a>
       </div>
     </div>
   </nav>
 
+  <header class="hero">
+    <div class="container center">
+      <h1>Our Services</h1>
+      <p>Solutions to help your local business automate, grow, and scale.</p>
+    </div>
+  </header>
+
   <main>
     <section class="section">
+      <div class="container cards">
+        <div class="card">
+          <h3>Digital Presence &amp; Web Revamp</h3>
+          <p>Conversion-focused sites built for speed, SEO, and a premium look.</p>
+        </div>
+        <div class="card">
+          <h3>SEO &amp; Local Optimization</h3>
+          <p>Get found first on Google and maps. Local SEO that wins your area.</p>
+        </div>
+        <div class="card">
+          <h3>Workflow Automation &amp; AI</h3>
+          <p>Automate repetitive tasks and connect your tools to save hours every week.</p>
+        </div>
+        <div class="card">
+          <h3>Social Media &amp; Brand Growth</h3>
+          <p>Consistent, creative content that builds community and loyalty.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cta">
       <div class="container center">
-        <h1 class="center">Our Services</h1>
-        <p class="lead center">Page coming soon.</p>
+        <h2>Ready to start?</h2>
+        <a href="index.html#contact" class="button">Talk to Us</a>
       </div>
     </section>
   </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <small>© 2025 NovaScale • novascale.ca</small>
+      <div><a href="index.html">Home</a> • <a href="services.html">Services</a> • <a href="index.html#contact">Contact</a></div>
+    </div>
+  </footer>
 </body>
 </html>
