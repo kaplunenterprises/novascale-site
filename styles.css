@@ -28,29 +28,172 @@ a{text-decoration:none;color:var(--white);transition:.3s}
 a:hover{color:var(--gold)}
 
 /* ====== NAVBAR ====== */
-.navbar{
+.navbar {
+  width: 100%;
+  padding: 1.2rem 2.5rem 1.2rem 2rem; /* balanced spacing so both links fit */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem; /* spacing between "What We Do" and "Contact" */
+}
+
+.navbar nav a {
+  font-weight: 500;
+  opacity: 0.9;
+  white-space: nowrap; /* ensures no wrapping */
+}
+
+.navbar nav a:hover {
+  color: var(--gold);
+  opacity: 1;
+}
+
+/* ====== HERO ====== */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:var(--white);
+  padding:0 1rem;
+}
+.hero img{width:90px;margin-bottom:1rem}
+.hero h1{font-size:3rem;font-weight:700;color:var(--gold);margin-bottom:1rem}
+.hero p{font-size:1.2rem;color:var(--silver);max-width:600px}
+.hero button{
+  margin-top:2rem;
+  background:none;
+  border:1px solid var(--gold);
+  color:var(--white);
+  padding:.75rem 1.5rem;
+  font-weight:600;
+  border-radius:6px;
+  transition:all .3s ease;
+  cursor:pointer;
+}
+.hero button:hover{
+  background:var(--gold);
+  color:var(--muted);
+  transform:scale(1.05);
+}
+
+/* ====== INTRO ====== */
+.intro{
+  min-height:100vh;
+  background:linear-gradient(180deg,#0d0d0d 0%,#141414 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:6rem 2rem;
+  text-align:center;
+}
+.intro-content{max-width:900px}
+.intro h2{font-size:2.5rem;color:var(--gold);margin-bottom:1rem}
+.intro p{
+  font-size:1.15rem;
+  color:var(--silver);
+  margin:0 auto 3rem;
+  line-height:1.7;
+}
+.intro-grid{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:2rem;
+}
+.intro-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(189,165,96,.3);
+  border-radius:12px;
+  padding:2rem;
+  width:260px;
+  transition:all .3s ease;
+}
+.intro-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 10px 25px rgba(189,165,96,.15);
+}
+.intro-card h3{color:var(--gold);margin-bottom:.75rem}
+.intro-card p{color:var(--white);opacity:.85}
+
+/* ====== WHAT WE DO ====== */
+.what-we-do{
+  padding:6rem 2rem;
+  text-align:center;
+  background:rgba(255,255,255,.03);
+}
+.what-we-do h2{font-size:2.5rem;color:var(--gold);margin-bottom:1rem}
+.what-we-do p{
+  color:var(--silver);
+  max-width:700px;
+  margin:0 auto;
+  line-height:1.7;
+}
+
+/* ====== CONTACT ====== */
+.contact{
+  padding:6rem 2rem;
+  text-align:center;
+  background:linear-gradient(180deg,#111111 0%,#0d0d0d 100%);
+}
+.contact h2{font-size:2.5rem;color:var(--gold);margin-bottom:1rem}
+.contact p{
+  color:var(--silver);
+  margin-bottom:2rem;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.6;
+}
+.form-container{display:flex;justify-content:center}
+
+/* Airtable fade-in effect */
+.airtable-embed{
   width:100%;
-  padding:1.2rem 2.5rem 1.2rem 2rem; /* adjusted for two links */
-  position:fixed;
-  top:0;left:0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  max-width:900px;
+  height:720px;
+  border-radius:12px;
+  border:1px solid rgba(189,165,96,.3);
+  background:transparent;
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .8s ease;
+}
+.airtable-embed.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ====== FOOTER ====== */
+.footer{
+  text-align:center;
+  padding:2rem;
   background:rgba(0,0,0,.4);
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
-  z-index:1000;
-  border-bottom:1px solid rgba(255,255,255,.05);
+  color:rgba(255,255,255,.6);
+  font-size:.9rem;
 }
-
-.nav-logo{
-  display:flex;
-  align-items:center;
-  gap:.6rem;
-  font-weight:700;
-  color:var(--gold);
-  font-size:1.1rem;
-}
-
-.navbar nav{
-  disp
