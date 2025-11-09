@@ -29,7 +29,6 @@
     </div>
     <nav>
       <a href="#home">Home</a>
-      <a href="#case-study">Case Study</a>
       <a href="#what-we-do">What We Do</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -70,15 +69,6 @@
     </div>
   </section>
 
-  <!-- CASE STUDY SECTION -->
-  <section id="case-study" class="case-study">
-    <h2>Case Study</h2>
-    <p>
-      Explore how NovaScale helped local businesses automate and grow.<br>
-      <span class="coming-soon">Case studies coming soon.</span>
-    </p>
-  </section>
-
   <!-- WHAT WE DO SECTION -->
   <section id="what-we-do" class="what-we-do">
     <h2>What We Do</h2>
@@ -88,15 +78,15 @@
     </p>
   </section>
 
-  <!-- CONTACT SECTION (WITH AIRTABLE) -->
+  <!-- CONTACT SECTION -->
   <section id="contact" class="contact">
     <h2>Let's Talk</h2>
     <p>Ready to transform your business? Fill out the quick form below and we’ll be in touch shortly.</p>
     <div class="form-container">
-      <!-- 👇 Replace this src with your actual Airtable embed link -->
+      <!-- Replace this link with your Airtable embed URL -->
       <iframe
         class="airtable-embed"
-        src="https://airtable.com/embed/app2h3HVTzZEKZHPD/pagJhru7hkBSSEQ2Q/form"
+        src="https://airtable.com/embed/YOUR_FORM_LINK_HERE?backgroundColor=gray"
         frameborder="0"
         onmousewheel=""
         width="100%"
@@ -104,10 +94,30 @@
         style="background: transparent; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px;"
       ></iframe>
     </div>
+    <!-- Success Message (hidden until submission) -->
+    <div id="form-success" class="form-success">
+      <h3>✅ Thanks for reaching out!</h3>
+      <p>We’ve received your message and will get back to you within 24 hours.</p>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
+    <p>© 2025 NovaScale. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Detect Airtable post-submission and show success message
+    window.addEventListener("message", (event) => {
+      if (event.data?.type === "airtable-form-submit") {
+        document.querySelector(".airtable-embed").style.display = "none";
+        document.getElementById("form-success").style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
+
     <p>© 2025 NovaScale. All rights reserved.</p>
   </footer>
 </body>
