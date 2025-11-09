@@ -30,7 +30,7 @@ a:hover { color: var(--gold); }
 /* ====== NAVBAR ====== */
 .navbar {
   width: 100%;
-  padding: 1.2rem 3rem;
+  padding: 1.2rem 2rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -44,12 +44,11 @@ a:hover { color: var(--gold); }
 }
 
 .nav-logo {
+  .navbar nav {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  gap: 0.6rem;
-  font-weight: 700;
-  color: var(--gold);
-  font-size: 1.1rem;
+  gap: 2rem; /* evenly spaced links */
 }
 
 .navbar nav a {
@@ -247,7 +246,18 @@ a:hover { color: var(--gold); }
   border-radius: 12px;
   border: 1px solid rgba(189, 165, 96, 0.3);
   background: transparent;
+
+  /* fade-in animation */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
 }
+
+.airtable-embed.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* ====== FOOTER ====== */
 .footer {
