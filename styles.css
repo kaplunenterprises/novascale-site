@@ -53,12 +53,22 @@ a:hover{color:var(--gold)}
   font-size: 1.1rem;
 }
 
-.navbar nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2rem; /* spacing between "What We Do" and "Contact" */
+.navbar nav{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:2rem;
+  flex-wrap:nowrap;        /* keeps links on one line */
+  overflow:hidden;         /* prevents layout shift */
+  max-width:100%;          /* ensures no overflow off-screen */
 }
+@media (max-width: 768px) {
+  .navbar nav {
+    gap: 1rem;              /* tighter gap on small screens */
+    padding-right: 1rem;
+  }
+}
+
 
 .navbar nav a {
   font-weight: 500;
