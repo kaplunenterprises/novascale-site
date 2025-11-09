@@ -30,7 +30,7 @@ a:hover{color:var(--gold)}
 /* ====== NAVBAR ====== */
 .navbar {
   width: 100%;
-  padding: 1.2rem 2.5rem 1.2rem 2rem; /* balanced spacing so both links fit */
+  padding: 1.2rem 1.5rem 1.2rem 2rem; /* balanced spacing so both links fit */
   position: fixed;
   top: 0;
   left: 0;
@@ -57,7 +57,7 @@ a:hover{color:var(--gold)}
   display:flex;
   justify-content:flex-end;
   align-items:center;
-  gap:2rem;
+  gap:1.5rem;
   flex-wrap:nowrap;        /* keeps links on one line */
   overflow:hidden;         /* prevents layout shift */
   max-width:100%;          /* ensures no overflow off-screen */
