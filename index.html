@@ -19,169 +19,41 @@
   <style>html{scroll-behavior:smooth}</style>
 </head>
 <body>
+  <!-- Hero Section -->
   <section class="hero" id="home">
-  <img src="/logos/novascale_icon_n_gold.svg" alt="NovaScale logo" width="90">
-  <h1>Empower. Automate. Scale.</h1>
-  <p>Helping local businesses grow through automation and scalable solutions.</p>
-  <button>Get Started</button>
+    <img src="/logos/novascale_icon_n_gold.svg" alt="NovaScale logo" width="90">
+    <h1>Empower. Automate. Scale.</h1>
+    <p>Helping local businesses grow through automation and scalable solutions.</p>
+    <button onclick="document.getElementById('intro').scrollIntoView({ behavior: 'smooth' });">
+      Get Started
+    </button>
+  </section>
 
-  <nav>
-    <div class="container inner">
-      <div class="brand">
-        <!-- Header logo path fixed -->
-        <img src="/logos/novascale_icon_n_gold.svg" alt="NovaScale N">
-        <span>NovaScale</span>
-      </div>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <!-- This already scrolls on the home page -->
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="container center">
-      <h1>Empower. Automate. Scale Local.</h1>
-      <p>Helping local businesses modernize their workflows and digital presence.</p>
-      <a class="button" href="services.html">Work With Us</a>
-    </div>
-  </header>
-
-  <main>
-    <!-- Our Mission section with reduced vertical spacing -->
-    <section class="section">
-      <div class="container center" style="display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:40vh;text-align:center;padding:40px 0">
-        <h2>Our Mission</h2>
-        <p class="lead" style="max-width:720px;margin:auto">
-          At NovaScale, we empower local businesses through clarity, systems, and smart growth — bringing modern digital tools to the heart of your community.
-        </p>
-      </div>
-    </section>
-
-    <!-- Case Study blurb section -->
-    <section class="section">
-      <div class="container center" style="text-align:center">
-        <h2>Case Study</h2>
-        <p class="lead" style="max-width:720px;margin:auto">
-          Explore how NovaScale helped local businesses automate and grow. Case studies coming soon.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="center">What We Do</h2>
-        <div class="cards">
-          <div class="card">
-            <h3>Digital Presence &amp; Web Revamp</h3>
-            <p>Build a stunning, conversion‑optimized online home for your business.</p>
-          </div>
-          <div class="card">
-            <h3>SEO &amp; Local Optimization</h3>
-            <p>Make sure customers find you first — not your competitors.</p>
-          </div>
-          <div class="card">
-            <h3>Workflow Automation &amp; AI</h3>
-            <p>Save hours daily with smart automations and AI systems.</p>
-          </div>
-          <div class="card">
-            <h3>Social Media &amp; Brand Growth</h3>
-            <p>Build community and loyalty through consistent, creative content.</p>
-          </div>
+  <!-- Intro Section -->
+  <section class="intro" id="intro">
+    <div class="intro-content">
+      <h2>Building Modern Growth Systems</h2>
+      <p>
+        At NovaScale, we help local businesses thrive through clarity, automation, and strategy.
+        We blend modern digital systems with proven marketing frameworks — empowering your brand to
+        scale with confidence and impact.
+      </p>
+      <div class="intro-grid">
+        <div class="intro-card">
+          <h3>Automation</h3>
+          <p>Save time by automating key workflows, follow-ups, and client communication.</p>
         </div>
-        <div style="margin-top:28px;text-align:center">
-          <a class="button" href="services.html">See All Services</a>
+        <div class="intro-card">
+          <h3>Marketing Systems</h3>
+          <p>Build an online presence that turns attention into loyal customers.</p>
+        </div>
+        <div class="intro-card">
+          <h3>Local Empowerment</h3>
+          <p>Modern tools designed for small businesses that want to grow without losing their roots.</p>
         </div>
       </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container center">
-        <h2>Let’s talk.</h2>
-        <form id="contact-form" class="form">
-          <div class="input">
-            <label for="fullName">Full Name</label>
-            <input id="fullName" name="fullName" required>
-          </div>
-          <div class="input">
-            <label for="businessName">Business Name</label>
-            <input id="businessName" name="businessName">
-          </div>
-          <div class="input">
-            <label for="email">Email Address</label>
-            <input id="email" name="email" type="email" required>
-          </div>
-          <div class="input">
-            <label for="phone">Phone Number</label>
-            <input id="phone" name="phone">
-          </div>
-          <div class="input full">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your goals…"></textarea>
-          </div>
-          <div class="full" style="text-align:left">
-            <button class="button" type="submit">Send</button>
-          </div>
-        </form>
-        <p id="form-status" style="margin-top:16px;"></p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
-      <small>© 2025 NovaScale • novascale.ca</small>
-      <div><a href="index.html">Home</a> • <a href="services.html">Services</a> • <a href="#contact">Contact</a></div>
     </div>
-  </footer>
-
-  <!-- Secure front-end: talk to Netlify Function -->
-  <script>
-    (function () {
-      const form = document.getElementById('contact-form');
-      const statusText = document.getElementById('form-status');
-      if (!form) return;
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
-        statusText.textContent = 'Sending...';
-
-        const payload = {
-          fields: {
-            "Full Name": form.fullName.value,
-            "Business Name": form.businessName.value,
-            "Email": form.email.value,
-            "Phone": form.phone.value,
-            "Message": form.message.value
-          }
-        };
-
-        try {
-          const res = await fetch('/.netlify/functions/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-          if (res.ok) {
-            statusText.textContent = '✅ Message sent successfully!';
-            form.reset();
-          } else {
-            statusText.textContent = 'Hmm, something went wrong sending your message. Please email us instead.';
-          }
-        } catch (err) {
-          statusText.textContent = 'Hmm, something went wrong sending your message. Please email us instead.';
-        } finally {
-          submitBtn.disabled = false;
-          submitBtn.textContent = originalText;
-        }
-      });
-    })();
-  </script>
+  </section>
 </body>
+
 </html>
