@@ -122,9 +122,7 @@ a:hover { color: var(--gold); }
   text-align: center;
 }
 
-.intro-content {
-  max-width: 900px;
-}
+.intro-content { max-width: 900px; }
 
 .intro h2 {
   font-size: 2.5rem;
@@ -237,21 +235,18 @@ a:hover { color: var(--gold); }
   line-height: 1.6;
 }
 
-.cta-button {
-  display: inline-block;
-  background: none;
-  border: 1px solid var(--gold);
-  color: var(--white);
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+.form-container {
+  display: flex;
+  justify-content: center;
 }
 
-.cta-button:hover {
-  background: var(--gold);
-  color: var(--muted);
-  transform: scale(1.05);
+.airtable-embed {
+  width: 100%;
+  max-width: 900px;
+  height: 720px;
+  border-radius: 12px;
+  border: 1px solid rgba(189, 165, 96, 0.3);
+  background: transparent;
 }
 
 /* ====== FOOTER ====== */
