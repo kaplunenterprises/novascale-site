@@ -115,6 +115,14 @@
   <footer class="footer">
     <p>© 2025 NovaScale. All rights reserved.</p>
   </footer>
+  <script>
+  const form = document.querySelector('.airtable-embed');
+  window.addEventListener('scroll', () => {
+    const rect = form.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 150) form.classList.add('visible');
+  });
+</script>
+
 </body>
 </html>
 
