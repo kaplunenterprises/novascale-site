@@ -30,7 +30,7 @@ a:hover{color:var(--gold)}
 /* ====== NAVBAR ====== */
 .navbar {
   width: 100%;
-  padding: 1.2rem 1.5rem 1.2rem 2rem; /* balanced spacing so both links fit */
+  padding: 1.2rem 1.5rem; /* reduces horizontal padding equally */
   position: fixed;
   top: 0;
   left: 0;
@@ -42,6 +42,7 @@ a:hover{color:var(--gold)}
   -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-sizing: border-box; /* ensures padding doesn’t push content out */
 }
 
 .nav-logo {
@@ -53,15 +54,16 @@ a:hover{color:var(--gold)}
   font-size: 1.1rem;
 }
 
-.navbar nav{
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
-  gap:1.5rem;
-  flex-wrap:nowrap;        /* keeps links on one line */
-  overflow:hidden;         /* prevents layout shift */
-  max-width:100%;          /* ensures no overflow off-screen */
+.navbar nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  min-width: 0;
 }
+
 @media (max-width: 768px) {
   .navbar nav {
     gap: 1rem;              /* tighter gap on small screens */
@@ -69,12 +71,14 @@ a:hover{color:var(--gold)}
   }
 }
 
-
 .navbar nav a {
   font-weight: 500;
   opacity: 0.9;
-  white-space: nowrap; /* ensures no wrapping */
+  white-space: nowrap;
+  text-align: right;
+  flex-shrink: 0; /* prevents the link text from squishing */
 }
+
 
 .navbar nav a:hover {
   color: var(--gold);
