@@ -27,7 +27,7 @@ html, body {
 a { text-decoration: none; color: var(--white); transition: 0.3s; }
 a:hover { color: var(--gold); }
 
-/* ====== NAVBAR (restored clean version) ====== */
+/* ====== NAVBAR ====== */
 .navbar {
   width: 100%;
   padding: 1.2rem 3rem;
@@ -37,11 +37,8 @@ a:hover { color: var(--gold); }
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background: rgba(0, 0, 0, 0.4); /* translucent black overlay */
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -55,25 +52,63 @@ a:hover { color: var(--gold); }
   font-size: 1.1rem;
 }
 
-.navbar nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2.5rem; /* more spacing so 'Contact' fits */
-}
-
 .navbar nav a {
+  margin-left: 2rem;
   font-weight: 500;
-  font-size: 1rem;
-  color: var(--white);
   opacity: 0.9;
-  white-space: nowrap;
-  transition: 0.3s ease;
 }
 
 .navbar nav a:hover {
   color: var(--gold);
   opacity: 1;
+}
+
+/* ====== HERO ====== */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 1rem;
+}
+
+.hero img {
+  width: 90px;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--silver);
+  max-width: 600px;
+}
+
+.hero button {
+  margin-top: 2rem;
+  background: none;
+  border: 1px solid var(--gold);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background: var(--gold);
+  color: var(--muted);
+  transform: scale(1.05);
 }
 
 /* ====== INTRO ====== */
