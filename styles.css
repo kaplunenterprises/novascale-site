@@ -10,44 +10,47 @@ html, body {
 }
 
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
 }
 
-:root {
-  --bg: #0D0D0D;
-  --gold: #D4AF37;
-  --silver: #E6E6E6;
-  --white: #F8F8F8;
-  --muted: #141414;
-  --border: #2A2A2A;
+:root{
+  --bg:#0D0D0D;
+  --gold:#D4AF37;
+  --silver:#E6E6E6;
+  --white:#F8F8F8;
+  --muted:#141414;
+  --border:#2A2A2A;
 }
 
-a { text-decoration: none; color: var(--white); transition: 0.3s; }
-a:hover { color: var(--gold); }
+a{text-decoration:none;color:var(--white);transition:.3s}
+a:hover{color:var(--gold)}
 
 /* ====== NAVBAR ====== */
-.navbar {
-  width: 100%;
-  padding: 1.2rem 1rem 1.2rem 1.5rem; /* ✅ fixed right padding so 'Contact' fits */
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+.navbar{
+  width:100%;
+  padding:1.2rem 2.5rem 1.2rem 2rem; /* adjusted for two links */
+  position:fixed;
+  top:0;left:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,.4);
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,.05);
 }
 
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-weight: 700;
-  color: var(--gold);
-  font-size: 1.1rem;
+.nav-logo{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  font-weight:700;
+  color:var(--gold);
+  font-size:1.1rem;
+}
+
+.navbar nav{
+  disp
