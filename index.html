@@ -1,56 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NovaScale — Empower. Automate. Scale Local.</title>
-  <meta name="description" content="Helping local businesses modernize their workflows and digital presence with SEO, automation, AI, and social growth.">
+  <meta name="description" content="Helping local businesses modernize their workflows and digital presence with SEO, automation, AI, and social growth." />
+  <link rel="icon" href="/logos/novascale_icon_n_gold.svg" type="image/svg+xml" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="/logos/novascale_icon_n_gold.svg" type="image/svg+xml">
-
-  <!-- Fonts and CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>html{scroll-behavior:smooth}</style>
 </head>
 
 <body>
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="nav-logo">
-      <img src="/logos/novascale_icon_n_gold.svg" alt="NovaScale logo" width="28">
+      <img src="/logos/novascale_icon_n_gold.svg" alt="NovaScale logo" width="28" />
       <span>NovaScale</span>
     </div>
     <nav>
-  <a href="#home">Home</a>
-  <a href="#what-we-do">What We Do</a>
-  <a href="#contact">Contact</a>
-</nav>
+      <a href="#home">Home</a>
+      <a href="#what-we-do">What We Do</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO -->
   <section class="hero" id="home">
-    <img src="/logos/novascale_icon_n_gold.svg" alt="NovaScale logo" width="90">
+    <img src="/logos/novascale_icon_n_gold.svg" alt="NovaScale logo" width="90" />
     <h1>Empower. Automate. Scale.</h1>
     <p>Helping local businesses grow through automation and scalable solutions.</p>
-    <button onclick="document.getElementById('intro').scrollIntoView({ behavior: 'smooth' });">
+    <button onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">
       Get Started
     </button>
   </section>
 
-  <!-- INTRO SECTION -->
+  <!-- INTRO -->
   <section class="intro" id="intro">
     <div class="intro-content">
       <h2>Building Modern Growth Systems</h2>
       <p>
-        At NovaScale, we empower local businesses through clarity, systems, and smart growth —
-        bringing modern digital tools to the heart of your community.
+        At NovaScale, we empower local businesses through clarity, systems, and smart growth — bringing modern digital tools to the heart of your community.
       </p>
       <div class="intro-grid">
         <div class="intro-card">
@@ -69,45 +63,28 @@
     </div>
   </section>
 
-  <!-- CASE STUDY SECTION -->
-  <section id="case-study" class="case-study">
-    <h2>Case Study</h2>
-    <p>
-      Explore how NovaScale helped local businesses automate and grow.<br>
-      <span class="coming-soon">Case studies coming soon.</span>
-    </p>
-  </section>
-
-  <!-- WHAT WE DO SECTION -->
+  <!-- WHAT WE DO -->
   <section id="what-we-do" class="what-we-do">
     <h2>What We Do</h2>
     <p>
-      We design full digital ecosystems for local businesses — from websites and automations to
-      content and analytics — giving you systems that scale while you sleep.
+      We design full digital ecosystems for local businesses — from websites and automations to content and analytics — giving you systems that scale while you sleep.
     </p>
   </section>
 
-  <!-- CONTACT SECTION (WITH AIRTABLE) -->
+  <!-- CONTACT -->
   <section id="contact" class="contact">
     <h2>Let's Talk</h2>
     <p>Ready to transform your business? Fill out the quick form below and we’ll be in touch shortly.</p>
     <div class="form-container">
-      <!-- 👇 Replace this src with your actual Airtable embed link -->
-     <iframe
-  class="airtable-embed"
-  src="https://airtable.com/embed/app2h3HVTzZEKZHPD/pagJhru7hkBSSEQ2Q/form?backgroundColor=black"
-  frameborder="0"
-  onmousewheel=""
-  width="100%"
-  height="720"
-  style="
-    background: rgba(0,0,0,0.65);
-    border: 1px solid rgba(212,175,55,0.35);
-    border-radius: 14px;
-    box-shadow: 0 0 30px rgba(212,175,55,0.08);
-  "
-></iframe>
-
+      <iframe
+        class="airtable-embed"
+        src="https://airtable.com/embed/app2h3HVTzZEKZHPD/pagJhru7hkBSSEQ2Q/form?backgroundColor=black"
+        frameborder="0"
+        onmousewheel=""
+        width="100%"
+        height="720"
+        style="background:rgba(0,0,0,0.65);border:1px solid rgba(212,175,55,0.35);border-radius:14px;box-shadow:0 0 30px rgba(212,175,55,0.08);"
+      ></iframe>
     </div>
   </section>
 
@@ -115,14 +92,14 @@
   <footer class="footer">
     <p>© 2025 NovaScale. All rights reserved.</p>
   </footer>
-  <script>
-  const form = document.querySelector('.airtable-embed');
-  window.addEventListener('scroll', () => {
-    const rect = form.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 150) form.classList.add('visible');
-  });
-</script>
 
+  <!-- Fade-in Script -->
+  <script>
+    const form = document.querySelector(".airtable-embed");
+    window.addEventListener("scroll", () => {
+      const rect = form.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 150) form.classList.add("visible");
+    });
+  </script>
 </body>
 </html>
-
